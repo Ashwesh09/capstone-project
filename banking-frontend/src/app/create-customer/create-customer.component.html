@@ -1,0 +1,27 @@
+<div class="col-md-6 offset-md-3">
+  <h3>Create Customer</h3>
+  <form (ngSubmit)="onSubmit()">
+    <div class="from-group" style="margin-top: 2%">
+      <label> Customer Id </label>
+      <input
+        type="number"
+        class="form-control"
+        id="customerId"
+        [(ngModel)]="customer.customerId"
+        name="customerId"
+      />
+      <label> Full Name </label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        [(ngModel)]="customer.name"
+        name="name"
+      />
+    </div>
+
+    <button class="btn btn-success" type="submit" style="margin-top: 2%">
+      Submit
+    </button>
+  </form>
+</div>

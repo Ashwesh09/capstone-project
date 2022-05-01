@@ -1,0 +1,35 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Do Transaction </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="from-group" style="margin-top: 2%;">
+            <label> From Account Number </label>
+            <input type="text" class="form-control" id="fromAccNo" 
+                [(ngModel)] = "transaction.fromAccNo" name="fromAccNo">
+        </div>
+
+        <div class="from-group" style="margin-top: 2%;">
+            <label> To Account Number </label>
+            <input type="text" class="form-control" id="toAccNo" 
+                [(ngModel)] = "transaction.toAccNo" name="toAccNo">
+        </div>
+
+        <div class="from-group" style="margin-top: 2%;">
+            <label> Amount </label>
+            <input type="text" class="form-control" id="amount" 
+                [(ngModel)] = "transaction.amount" name="amount">
+        </div>
+    
+        <div class="from-group" style="margin-top: 2%;">
+            <label> Transaction Type </label>
+            <select type="text" class="form-control" id="transactionType" name="transactionType" 
+            [(ngModel)]="transaction.transactionType"> 
+                <option value="debit">Debit</option>
+                <option value="credit">Credit</option>
+            </select> 
+        </div>
+    
+        <button class="btn btn-success" type="submit" style="margin-top: 2%;"> Submit </button>
+       
+    </form>
+    </div>

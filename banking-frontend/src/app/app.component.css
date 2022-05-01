@@ -1,0 +1,11 @@
+div{
+   font-family: 'Times New Roman', serif;
+   font-size: 30px;
+}
+nav{
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.4s;
+}
+h1{
+    font-size: 60px;
+}

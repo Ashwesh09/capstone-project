@@ -1,0 +1,30 @@
+<h2> Transactions </h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> Transaction ID </th>
+            <th> From Account </th>
+            <th> To Account </th>
+            <th> Amount </th>
+            <th> Transaction Type </th>
+            <th> Action </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let transaction of transactions">
+            <td>{{ transaction.trasactionId }}</td>
+            <td>{{ transaction.fromAccNo }}</td>
+            <td>{{ transaction.toAccNo }}</td>
+            <td>{{ transaction.amount }}</td>
+            <td>{{ transaction.transactionType }}</td>
+            <td>
+        <button
+          (click)="revertTransaction(transaction.trasactionId)"
+          class="btn btn-danger"
+        >
+          Revert Transaction
+        </button>
+      </td>
+        </tr>
+    </tbody>
+</table>

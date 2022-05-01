@@ -1,0 +1,25 @@
+<h2> Bank Account List </h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> Account No. </th>
+            <th> Customer Id </th>
+            <th> Account type </th>
+            <th> BranchCode </th>
+            <th> Balance </th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let bankAccount of bankAccounts">
+            <td>{{ bankAccount.accountNo }}</td>
+            <td>{{ bankAccount.customerId }}</td>
+            <td>{{ bankAccount.accountType }}</td>
+            <td>{{ bankAccount.branchCode }}</td>
+            <td>{{ bankAccount.balance }}</td>
+            <td>
+                <button (click)="deleteBankAccount(bankAccount.accountNo)" class="btn btn-danger"> Delete </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

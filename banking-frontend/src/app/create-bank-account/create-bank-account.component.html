@@ -1,0 +1,41 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Create Bank Account </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="from-group" style="margin-top: 2%;">
+            <label> Account Number </label>
+            <input type="text" class="form-control" id="accountNo" 
+                [(ngModel)] = "bankAccount.accountNo" name="accountNo">
+        </div>
+
+        <div class="from-group" style="margin-top: 2%;">
+            <label> Customer ID </label>
+            <input type="text" class="form-control" id="customerId" 
+                [(ngModel)] = "bankAccount.customerId" name="customerId">
+        </div>
+
+        <div class="from-group" style="margin-top: 2%;">
+            <label> Account Type </label>
+            <select type="text" class="form-control" id="accountType" name="accountType" 
+            [(ngModel)]="bankAccount.accountType"> 
+                <option value="savings">savings</option>
+                <option value="salary">salary</option>
+            </select> 
+        </div>
+
+        <div class="from-group" style="margin-top: 2%;">
+            <label> Branch City Name </label>
+            <input type="text" class="form-control" id="branchCode" 
+                [(ngModel)] = "bankAccount.branchCode" name="branchCode">
+        </div>
+
+        <div class="from-group" style="margin-top: 2%;">
+            <label> Opening Balance </label>
+            <input type="text" class="form-control" id="balance" 
+                [(ngModel)] = "bankAccount.balance" name="balance">
+        </div>
+
+        <button class="btn btn-success" type="submit" style="margin-top: 2%;"> Submit </button>
+       
+    </form>
+    </div>
